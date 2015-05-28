@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Octicats assemble!</title>
+		<style>
+			p {
+				color: firebrick;
+				font-size: 1.5em;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Guess a number between 1 and 10</p>
+		<input id="guess">
+		<button onclick="clicked()">Click here!</button>
+		<p id="result"></p>
+
+		<script>
+			var answer = Math.floor(Math.random() * 10) + 1;
+			console.log(answer);
+
+			function clicked () {
+				var guess = document.getElementById("guess");
+				var result = document.getElementById("result");
+
+				if (guess.value == answer) {
+					result.innerHTML = "you got it";
+				}
+				else if (guess.value < answer) {
+					result.innerHTML = "too low";
+				}
+				else {
+					result.innerHTML = "too high";
+				}
+				console.log(input.value);
+			}
+		</script>
+	</body>
+</html>
